@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.springboot.dao.BlogDao">
+    <resultMap id="BaseResultMap" type="org.springboot.model.Blog">
+        <result column="ID" property="id" />
+        <result column="Title" property="title" />
+        <result column="Author" property="author" />
+        <result column="CreateTime" property="createTime" />
+        <result column="Content" property="content" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, province_id, city_name, description
+    </sql>
+
+    <select id="getAllBlog" resultMap="BaseResultMap" parameterType="org.springboot.model.Blog">
+        select *
+        from blog
+    </select>
+
+</mapper>
