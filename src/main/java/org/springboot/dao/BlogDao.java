@@ -1,5 +1,6 @@
 package org.springboot.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.springboot.model.Blog;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 *@date       ：Created in 2019/7/12 0:30
 *@description：博客数据访问接口
 */
-
+@Mapper
 public interface BlogDao {
     
     /**

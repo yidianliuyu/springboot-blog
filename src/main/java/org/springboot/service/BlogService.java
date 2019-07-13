@@ -3,6 +3,8 @@ package org.springboot.service;
 import org.springboot.dao.BlogDao;
 import org.springboot.iservice.IService;
 import org.springboot.model.Blog;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -13,10 +15,11 @@ import java.util.List;
  * @modified By：
  * @version: v1.0$
  */
-
+@Service
 public class BlogService implements IService {
 
-    BlogDao blogDao;
+    @Autowired
+    private BlogDao blogDao;
 
     @Override
     public List<Blog> getAlBlog() {

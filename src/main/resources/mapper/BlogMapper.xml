@@ -10,12 +10,11 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, province_id, city_name, description
+        ID, Title, Author, CreateTime, Content
     </sql>
 
     <select id="getAllBlog" resultMap="BaseResultMap" parameterType="org.springboot.model.Blog">
-        select *
-        from blog
+        select * from blog
     </select>
 
 </mapper>

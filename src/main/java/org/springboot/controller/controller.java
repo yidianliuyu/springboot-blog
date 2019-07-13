@@ -3,6 +3,7 @@ package org.springboot.controller;
 import org.springboot.iservice.IService;
 import org.springboot.model.Blog;
 import org.springboot.service.BlogService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,8 @@ import java.util.List;
 @RequestMapping("/myblog/v1")
 public class controller {
 
-    IService service;
+    @Autowired
+    private IService service;
 
     @RequestMapping("/hello")
     @ResponseBody
